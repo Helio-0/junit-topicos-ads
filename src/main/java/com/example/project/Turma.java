@@ -10,7 +10,7 @@ public class Turma {
         this.quant += 1;
         this.add += nota;
         this.media = add / quant;
-        if (nota > media) {
+        if (nota >= media) {
             this.quantM += 1;
         }
     }
