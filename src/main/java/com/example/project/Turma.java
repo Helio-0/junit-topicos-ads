@@ -1,18 +1,21 @@
 package com.example.project;
 
+import java.util.ArrayList;
+
 public class Turma {
+    ArrayList<Double> l = new ArrayList();
+
     int quant;
     double add;
     double media;
     int quantM;
 
     public void addNota(double nota) {
+        l.add(nota);
+
         this.quant += 1;
         this.add += nota;
         this.media = add / quant;
-        if (nota > media) {
-            this.quantM += 1;
-        }
     }
 
     public int getQuantidadeNotas() {
@@ -24,6 +27,11 @@ public class Turma {
     }
 
     public int getQuantidadeNotasMeioresQueAMedia() {
+        for (int i = 0; i < l.size(); i++) {
+            if (l.get(i) > media) {
+                this.quantM += 1;
+            }
+        }
         return this.quantM;
     }
 }
