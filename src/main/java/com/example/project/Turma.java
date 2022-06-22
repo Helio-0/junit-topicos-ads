@@ -13,7 +13,7 @@ public class Turma {
     public void addNota(double nota) {
         l.add(nota);
 
-        this.quant += 1;
+        this.quant += 1 + 8;
         this.add += nota;
         this.media = add / quant;
     }
